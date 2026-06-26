@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Luminary — Visual Gallery</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo" href="#">LUMINARY</a>
+      <p class="tagline">A curated visual archive</p>
+    </div>
+  </header>
+
+  <!-- Filter Bar -->
+  <nav class="filter-bar" role="navigation" aria-label="Gallery filters">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="nature">Nature</button>
+    <button class="filter-btn" data-filter="architecture">Architecture</button>
+    <button class="filter-btn" data-filter="abstract">Abstract</button>
+    <button class="filter-btn" data-filter="portrait">Portrait</button>
+  </nav>
+
+  <!-- Gallery Grid -->
+  <main class="gallery-grid" id="gallery" role="main">
+
+    <article class="gallery-item" data-category="nature" data-index="0">
+      <div class="img-wrap">
+        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80" alt="Mountain peaks above clouds" loading="lazy" />
+        <div class="overlay">
+          <span class="overlay-label">Nature</span>
+          <button class="expand-btn" aria-label="View full image">&#x2197;</button>
+        </div>
+      </div>
+      <div class="item-caption">
+        <h3>Alpine Heights</h3>
+        <p>Mountain peaks, Swiss Alps</p>
+      </div>
+    </article>
+
+    <article class="gallery-item tall" data-category="architecture" data-index="1">
+      <div class="img-wrap">
+        <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800&q=80" alt="Brutalist concrete building facade" loading="lazy" />
+        <div class="overlay">
+          <span class="overlay-label">Architecture</span>
+          <button class="expand-btn" aria-label="View full image">&#x2197;</button>
+        </div>
+      </div>
+      <div class="item-caption">
+        <h3>Concrete Rhythm</h3>
+        <p>Urban geometry, Berlin</p>
+      </div>
+    </article>
+
+    <article class="gallery-item" data-category="abstract" data-index="2">
+      <div class="img-wrap">
+        <img src="https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=800&q=80" alt="Abstract colorful paint swirls" loading="lazy" />
+        <div class="overlay">
+          <span class="overlay-label">Abstract</span>
+          <button class="expand-btn" aria-label="View full image">&#x2197;</button>
+        </div>
+      </div>
+      <div class="item-caption">
+        <h3>Chromatic Drift</h3>
+        <p>Oil on canvas, 2024</p>
+      </div>
+    </article>
+
+    <article class="gallery-item wide" data-category="nature" data-index="3">
+      <div class="img-wrap">
+        <img src="https://images.unsplash.com/photo-1501854140801-50d01698950b?w=1200&q=80" alt="Aerial view of green forest" loading="lazy" />
+        <div class="overlay">
+          <span class="overlay-label">Nature</span>
+          <button class="expand-btn" aria-label="View full image">&#x2197;</button>
+        </div>
+      </div>
+      <div class="item-caption">
+        <h3>Emerald Canopy</h3>
+        <p>Aerial forest, Amazon Basin</p>
+      </div>
+    </article>
+
+    <article class="gallery-item" data-category="portrait" data-index="4">
+      <div class="img-wrap">
+        <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=800&q=80" alt="Close-up portrait with dramatic lighting" loading="lazy" />
+        <div class="overlay">
+          <span class="overlay-label">Portrait</span>
+          <button class="expand-btn" aria-label="View full image">&#x2197;</button>
+        </div>
+      </div>
+      <div class="item-caption">
+        <h3>Chiaroscuro</h3>
+        <p>Studio light study</p>
+      </div>
+    </article>
+
+    <article class="gallery-item" data-category="abstract" data-index="5">
+      <div class="img-wrap">
+        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80" alt="Geometric light patterns" loading="lazy" />
+        <div class="overlay">
+          <span class="overlay-label">Abstract</span>
+          <button class="expand-btn" aria-label="View full image">&#x2197;</button>
+        </div>
+      </div>
+      <div class="item-caption">
+        <h3>Refraction</h3>
+        <p>Light geometry study</p>
+      </div>
+    </article>
+
+    <article class="gallery-item tall" data-category="architecture" data-index="6">
+      <div class="img-wrap">
+        <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=800&q=80" alt="City skyline at dusk" loading="lazy" />
+        <div class="overlay">
+          <span class="overlay-label">Architecture</span>
+          <button class="expand-btn" aria-label="View full image">&#x2197;</button>
+        </div>
+      </div>
+      <div class="item-caption">
+        <h3>Twilight Spires</h3>
+        <p>City skyline at dusk</p>
+      </div>
+    </article>
+
+    <article class="gallery-item" data-category="nature" data-index="7">
+      <div class="img-wrap">
+        <img src="https://images.unsplash.com/photo-1518020382113-a7e8fc38eac9?w=800&q=80" alt="Ocean waves crashing at sunset" loading="lazy" />
+        <div class="overlay">
+          <span class="overlay-label">Nature</span>
+          <button class="expand-btn" aria-label="View full image">&#x2197;</button>
+        </div>
+      </div>
+      <div class="item-caption">
+        <h3>Tide Break</h3>
+        <p>Pacific coast, Oregon</p>
+      </div>
+    </article>
+
+    <article class="gallery-item" data-category="portrait" data-index="8">
+      <div class="img-wrap">
+        <img src="https://images.unsplash.com/photo-1492681290082-e932832941e6?w=800&q=80" alt="Portrait in golden hour light" loading="lazy" />
+        <div class="overlay">
+          <span class="overlay-label">Portrait</span>
+          <button class="expand-btn" aria-label="View full image">&#x2197;</button>
+        </div>
+      </div>
+      <div class="item-caption">
+        <h3>Golden Hour</h3>
+        <p>Outdoor editorial study</p>
+      </div>
+    </article>
+    <!-- ===================== NATURE (1-10) ===================== -->
+
+<article class="gallery-item" data-category="nature">
+    <div class="img-wrap">
+        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800" alt="Mountain Lake">
+        <div class="overlay">
+            <span class="overlay-label">Nature</span>
+            <button class="expand-btn">+</button>
+        </div>
+    </div>
+    <div class="item-caption">
+        <h3>Mountain Lake</h3>
+        <p>Crystal reflections</p>
+    </div>
+</article>
+
+<article class="gallery-item tall" data-category="nature">
+    <div class="img-wrap">
+        <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800" alt="Forest Path">
+        <div class="overlay">
+            <span class="overlay-label">Nature</span>
+            <button class="expand-btn">+</button>
+        </div>
+    </div>
+    <div class="item-caption">
+        <h3>Forest Path</h3>
+        <p>Morning sunlight</p>
+    </div>
+</article>
+
+<article class="gallery-item wide" data-category="nature">
+    <div class="img-wrap">
+        <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=800" alt="Mountain Peaks">
+        <div class="overlay">
+            <span class="overlay-label">Nature</span>
+            <button class="expand-btn">+</button>
+        </div>
+    </div>
+    <div class="item-caption">
+        <h3>Mountain Peaks</h3>
+        <p>Golden sunrise</p>
+    </div>
+</article>
+
+<article class="gallery-item" data-category="nature">
+    <div class="img-wrap">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800" alt="Calm Lake">
+        <div class="overlay">
+            <span class="overlay-label">Nature</span>
+            <button class="expand-btn">+</button>
+        </div>
+    </div>
+    <div class="item-caption">
+        <h3>Calm Lake</h3>
+        <p>Peaceful reflections</p>
+    </div>
+</article>
+
+<article class="gallery-item tall" data-category="nature">
+    <div class="img-wrap">
+        <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=800" alt="Waterfall">
+        <div class="overlay">
+            <span class="overlay-label">Nature</span>
+            <button class="expand-btn">+</button>
+        </div>
+    </div>
+    <div class="item-caption">
+        <h3>Hidden Waterfall</h3>
+        <p>Flowing beauty</p>
+    </div>
+</article>
+
+<article class="gallery-item" data-category="nature">
+    <div class="img-wrap">
+        <img src="https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=800" alt="Flowers">
+        <div class="overlay">
+            <span class="overlay-label">Nature</span>
+            <button class="expand-btn">+</button>
+        </div>
+    </div>
+    <div class="item-caption">
+        <h3>Wild Flowers</h3>
+        <p>Spring colors</p>
+    </div>
+</article>
+
+<article class="gallery-item wide" data-category="nature">
+    <div class="img-wrap">
+        <img src="https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?w=800" alt="Green Forest">
+        <div class="overlay">
+            <span class="overlay-label">Nature</span>
+            <button class="expand-btn">+</button>
+        </div>
+    </div>
+    <div class="item-caption">
+        <h3>Green Forest</h3>
+        <p>Fresh wilderness</p>
+    </div>
+</article>
+
+<article class="gallery-item" data-category="nature">
+    <div class="img-wrap">
+        <img src="https://images.unsplash.com/photo-1433086966358-54859d0ed716?w=800" alt="River">
+        <div class="overlay">
+            <span class="overlay-label">Nature</span>
+            <button class="expand-btn">+</button>
+        </div>
+    </div>
+    <div class="item-caption">
+        <h3>Mountain River</h3>
+        <p>Pure flowing water</p>
+    </div>
+</article>
+
+<article class="gallery-item tall" data-category="nature">
+    <div class="img-wrap">
+        <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800" alt="Sunrise Valley">
+        <div class="overlay">
+            <span class="overlay-label">Nature</span>
+            <button class="expand-btn">+</button>
+        </div>
+    </div>
+    <div class="item-caption">
+        <h3>Sunrise Valley</h3>
+        <p>Morning glow</p>
+    </div>
+</article>
+
+<article class="gallery-item" data-category="nature">
+    <div class="img-wrap">
+        <img src="https://images.unsplash.com/photo-1426604966848-d7adac402bff?w=800" alt="Ocean Cliffs">
+        <div class="overlay">
+            <span class="overlay-label">Nature</span>
+            <button class="expand-btn">+</button>
+        </div>
+    </div>
+    <div class="item-caption">
+        <h3>Ocean Cliffs</h3>
+        <p>Coastal beauty</p>
+    </div>
+</article>
+<!-- ===================== ARCHITECTURE (1-10) ===================== -->
+
+<article class="gallery-item" data-category="architecture">
+  <div class="img-wrap">
+    <img src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?w=800&q=80" alt="Modern skyscraper" loading="lazy" />
+    <div class="overlay">
+      <span class="overlay-label">Architecture</span>
+      <button class="expand-btn" aria-label="View full image">&#x2197;</button>
+    </div>
+  </div>
+  <div class="item-caption">
+    <h3>Skyward Lines</h3>
+    <p>Modern skyscraper</p>
+  </div>
+</article>
+
+<article class="gallery-item tall" data-category="architecture">
+  <div class="img-wrap">
+    <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&q=80" alt="Glass tower" loading="lazy" />
+    <div class="overlay">
+      <span class="overlay-label">Architecture</span>
+      <button class="expand-btn" aria-label="View full image">&#x2197;</button>
+    </div>
+  </div>
+  <div class="item-caption">
+    <h3>Glass Reflection</h3>
+    <p>Contemporary facade</p>
+  </div>
+</article>
+
+<article class="gallery-item wide" data-category="architecture">
+  <div class="img-wrap">
+    <img src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?w=1200&q=80" alt="City bridge" loading="lazy" />
+    <div class="overlay">
+      <span class="overlay-label">Architecture</span>
+      <button class="expand-btn" aria-label="View full image">&#x2197;</button>
+    </div>
+  </div>
+  <div class="item-caption">
+    <h3>Urban Crossing</h3>
+    <p>Bridge engineering</p>
+  </div>
+</article>
+
+<article class="gallery-item" data-category="architecture">
+  <div class="img-wrap">
+    <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?w=800&q=80" alt="Historic building" loading="lazy" />
+    <div class="overlay">
+      <span class="overlay-label">Architecture</span>
+      <button class="expand-btn" aria-label="View full image">&#x2197;</button>
+    </div>
+  </div>
+  <div class="item-caption">
+    <h3>Historic Charm</h3>
+    <p>Classical architecture</p>
+  </div>
+</article>
+
+<article class="gallery-item tall" data-category="architecture">
+  <div class="img-wrap">
+    <img src="https://images.unsplash.com/photo-1460317442991-0ec209397118?w=800&q=80" alt="Modern office building" loading="lazy" />
+    <div class="overlay">
+      <span class="overlay-label">Architecture</span>
+      <button class="expand-btn" aria-label="View full image">&#x2197;</button>
+    </div>
+  </div>
+  <div class="item-caption">
+    <h3>Office Heights</h3>
+    <p>Minimal design</p>
+  </div>
+</article>
+
+<article class="gallery-item" data-category="architecture">
+  <div class="img-wrap">
+    <img src="https://images.unsplash.com/photo-1479839672679-a46483c0e7c8?w=800&q=80" alt="City skyline" loading="lazy" />
+    <div class="overlay">
+      <span class="overlay-label">Architecture</span>
+      <button class="expand-btn" aria-label="View full image">&#x2197;</button>
+    </div>
+  </div>
+  <div class="item-caption">
+    <h3>City Skyline</h3>
+    <p>Evening panorama</p>
+  </div>
+</article>
+
+<article class="gallery-item wide" data-category="architecture">
+  <div class="img-wrap">
+    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&q=80" alt="Business district" loading="lazy" />
+    <div class="overlay">
+      <span class="overlay-label">Architecture</span>
+      <button class="expand-btn" aria-label="View full image">&#x2197;</button>
+    </div>
+  </div>
+  <div class="item-caption">
+    <h3>Business District</h3>
+    <p>Urban landscape</p>
+  </div>
+</article>
+
+<article class="gallery-item tall" data-category="architecture">
+  <div class="img-wrap">
+    <img src="https://images.unsplash.com/photo-1494522358652-f30e61a60313?w=800&q=80" alt="Luxury hotel" loading="lazy" />
+    <div class="overlay">
+      <span class="overlay-label">Architecture</span>
+      <button class="expand-btn" aria-label="View full image">&#x2197;</button>
+    </div>
+  </div>
+  <div class="item-caption">
+    <h3>Luxury Hotel</h3>
+    <p>Elegant exterior</p>
+  </div>
+</article>
+
+<article class="gallery-item" data-category="architecture">
+  <div class="img-wrap">
+    <img src="https://images.unsplash.com/photo-1431576901776-e539bd916ba2?w=800&q=80" alt="Museum architecture" loading="lazy" />
+    <div class="overlay">
+      <span class="overlay-label">Architecture</span>
+      <button class="expand-btn" aria-label="View full image">&#x2197;</button>
+    </div>
+  </div>
+  <div class="item-caption">
+    <h3>Modern Museum</h3>
+    <p>Clean geometry</p>
+  </div>
+</article>
+
+<article class="gallery-item wide" data-category="architecture">
+  <div class="img-wrap">
+    <img src="https://images.unsplash.com/photo-1460317442991-0ec209397118?w=1200&q=80" alt="Architectural symmetry" loading="lazy" />
+    <div class="overlay">
+      <span class="overlay-label">Architecture</span>
+      <button class="expand-btn" aria-label="View full image">&#x2197;</button>
+    </div>
+  </div>
+  <div class="item-caption">
+    <h3>Perfect Symmetry</h3>
+    <p>Architectural precision</p>
+  </div>
+</article>
+
+<!-- Abstract 1 -->
+<div class="gallery-item" data-category="abstract">
+  <img src="https://images.unsplash.com/photo-1557672172-298e090bd0f1?auto=format&fit=crop&w=900&q=80" alt="Abstract Art 1">
+  <div class="overlay">
+    <h3>Color Symphony</h3>
+    <p>Abstract</p>
+  </div>
+</div>
+
+<!-- Abstract 2 -->
+<div class="gallery-item" data-category="abstract">
+  <img src="https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&w=900&q=80" alt="Abstract Art 2">
+  <div class="overlay">
+    <h3>Neon Shapes</h3>
+    <p>Abstract</p>
+  </div>
+</div>
+
+<!-- Abstract 3 -->
+<div class="gallery-item" data-category="abstract">
+  <img src="https://images.unsplash.com/photo-1515405295579-ba7b45403062?auto=format&fit=crop&w=900&q=80" alt="Abstract Art 3">
+  <div class="overlay">
+    <h3>Dream Waves</h3>
+    <p>Abstract</p>
+  </div>
+</div>
+
+<!-- Abstract 4 -->
+<div class="gallery-item" data-category="abstract">
+  <img src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?auto=format&fit=crop&w=900&q=80" alt="Abstract Art 4">
+  <div class="overlay">
+    <h3>Golden Motion</h3>
+    <p>Abstract</p>
+  </div>
+</div>
+
+<!-- Abstract 5 -->
+<div class="gallery-item" data-category="abstract">
+  <img src="https://images.unsplash.com/photo-1528459801416-a9e53bbf4e17?auto=format&fit=crop&w=900&q=80" alt="Abstract Art 5">
+  <div class="overlay">
+    <h3>Crystal Blur</h3>
+    <p>Abstract</p>
+  </div>
+</div>
+
+<!-- Abstract 6 -->
+<div class="gallery-item" data-category="abstract">
+  <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80" alt="Abstract Art 6">
+  <div class="overlay">
+    <h3>Liquid Light</h3>
+    <p>Abstract</p>
+  </div>
+</div>
+
+<!-- Abstract 7 -->
+<div class="gallery-item" data-category="abstract">
+  <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80" alt="Abstract Art 7">
+  <div class="overlay">
+    <h3>Digital Pulse</h3>
+    <p>Abstract</p>
+  </div>
+</div>
+
+<!-- Abstract 8 -->
+<div class="gallery-item" data-category="abstract">
+  <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=900&q=80" alt="Abstract Art 8">
+  <div class="overlay">
+    <h3>Pixel Storm</h3>
+    <p>Abstract</p>
+  </div>
+</div>
+
+<!-- Abstract 9 -->
+<div class="gallery-item" data-category="abstract">
+  <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=900&q=80" alt="Abstract Art 9">
+  <div class="overlay">
+    <h3>Infinite Glow</h3>
+    <p>Abstract</p>
+  </div>
+</div>
+
+<!-- Abstract 10 -->
+<div class="gallery-item" data-category="abstract">
+  <img src="https://images.unsplash.com/photo-1522199710521-72d69614c702?auto=format&fit=crop&w=900&q=80" alt="Abstract Art 10">
+  <div class="overlay">
+    <h3>Cosmic Flow</h3>
+    <p>Abstract</p>
+  </div>
+</div>
+
+<!-- Portrait 1 -->
+<div class="gallery-item" data-category="portrait">
+  <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=900&q=80" alt="Portrait 1">
+  <div class="overlay">
+    <h3>Elegant Smile</h3>
+    <p>Portrait</p>
+  </div>
+</div>
+
+<!-- Portrait 2 -->
+<div class="gallery-item" data-category="portrait">
+  <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=80" alt="Portrait 2">
+  <div class="overlay">
+    <h3>Confident Gaze</h3>
+    <p>Portrait</p>
+  </div>
+</div>
+
+<!-- Portrait 3 -->
+<div class="gallery-item" data-category="portrait">
+  <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=900&q=80" alt="Portrait 3">
+  <div class="overlay">
+    <h3>Natural Beauty</h3>
+    <p>Portrait</p>
+  </div>
+</div>
+
+<!-- Portrait 4 -->
+<div class="gallery-item" data-category="portrait">
+  <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=900&q=80" alt="Portrait 4">
+  <div class="overlay">
+    <h3>Classic Style</h3>
+    <p>Portrait</p>
+  </div>
+</div>
+
+<!-- Portrait 5 -->
+<div class="gallery-item" data-category="portrait">
+  <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80" alt="Portrait 5">
+  <div class="overlay">
+    <h3>Golden Hour</h3>
+    <p>Portrait</p>
+  </div>
+</div>
+
+<!-- Portrait 6 -->
+<div class="gallery-item" data-category="portrait">
+  <img src="https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?auto=format&fit=crop&w=900&q=80" alt="Portrait 6">
+  <div class="overlay">
+    <h3>Creative Look</h3>
+    <p>Portrait</p>
+  </div>
+</div>
+
+<!-- Portrait 7 -->
+<div class="gallery-item" data-category="portrait">
+  <img src="https://images.unsplash.com/photo-1504593811423-6dd665756598?auto=format&fit=crop&w=900&q=80" alt="Portrait 7">
+  <div class="overlay">
+    <h3>Urban Fashion</h3>
+    <p>Portrait</p>
+  </div>
+</div>
+
+<!-- Portrait 8 -->
+<div class="gallery-item" data-category="portrait">
+  <img src="https://images.unsplash.com/photo-1521119989659-a83eee488004?auto=format&fit=crop&w=900&q=80" alt="Portrait 8">
+  <div class="overlay">
+    <h3>Bright Expression</h3>
+    <p>Portrait</p>
+  </div>
+</div>
+
+<!-- Portrait 9 -->
+<div class="gallery-item" data-category="portrait">
+  <img src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?auto=format&fit=crop&w=900&q=80" alt="Portrait 9">
+  <div class="overlay">
+    <h3>Modern Elegance</h3>
+    <p>Portrait</p>
+  </div>
+</div>
+
+<!-- Portrait 10 -->
+<div class="gallery-item" data-category="portrait">
+  <img src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=900&q=80" alt="Portrait 10">
+  <div class="overlay">
+    <h3>Timeless Charm</h3>
+    <p>Portrait</p>
+  </div>
+</div>
+
+  </main>
+
+  <!-- Empty state -->
+  <div class="empty-state" id="emptyState" hidden>
+    <p>No images in this category yet.</p>
+  </div>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image lightbox" hidden>
+    <button class="lb-close" id="lbClose" aria-label="Close lightbox">&#x2715;</button>
+    <button class="lb-nav lb-prev" id="lbPrev" aria-label="Previous image">&#x2039;</button>
+    <button class="lb-nav lb-next" id="lbNext" aria-label="Next image">&#x203A;</button>
+    <div class="lb-stage">
+      <img class="lb-img" id="lbImg" src="" alt="" />
+      <div class="lb-info">
+        <span class="lb-category" id="lbCategory"></span>
+        <h2 class="lb-title" id="lbTitle"></h2>
+        <p class="lb-sub" id="lbSub"></p>
+        <span class="lb-counter" id="lbCounter"></span>
+      </div>
+    </div>
+  </div>
+  <div class="lb-backdrop" id="lbBackdrop"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
